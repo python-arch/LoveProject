@@ -3,7 +3,7 @@
 <head>
 <script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>This one is for my Varchhu</title>
+<title>This one is for my Lamona</title>
 
 <style type="text/css">
 @font-face {
@@ -22,45 +22,47 @@
 
 <div id="mainDiv">
 	<div id="content">
-		<div id="code">
-			<span class="comments">/**</span><br />
-			<span class="space"/><span class="comments">*THE CODE OF LOVE</span><br />
-			<span class="space"/><span class="comments">*/</span><br />
-			Hey Girl !<br />
-			Do you remember the day we first met?<br />
-			<span class="comments">// The ET-LAB Friday. </span><br />
-			Since that day a spark begun;<br />
-			<span class="comments">// Your face Your Voice Your Words.</span><br />
-			Your everything got imprinted in my heart;<br />
-			As the time went on;<br />
-			The Bond grew stronger and stronger;<br />
-			Journey from Infatuation to Love;<br />
-			We have traveled a long way together;<br />
-			There have been fights ;<br />
-			<span class="comments">// And I'm sure there will be more.</span><br />
-			But our Bond will always grow back Stronger;<br />
+		<div id="code" style="margin-top:0px;">
+			<span class="comments">// A CODE FOR LAMONA</span><br />
+			Hey Pretty !<br />
+			Do you remember the time we first met?<br />
+			<span class="comments">// HINT : You can look to the right. </span><br />
+			Since that a spark that never ended begun;<br />
+			<span class="comments">// Your Beautiful face, Your Moves, Your Words , Your Voice.</span><br />
+			Your got All of this imprinted in my heart and mind;<br />
+			As Our time together went on;<br />
+			Our Bond grew stronger and stronger;<br />
+			We faced a lot of struggles;<br />
+			We have tried to get through all of them;<br />
+			and Here I am , Thanking God for having you everyday by my side;<br />
+			<span class="comments">// And Wishing that we will make more and more memories;</span><br />
+			I am not lying when I say that you are the most precious thing in my life;<br />
 			<br>
+			Cause without you I will be drowning in in the dark;<br />
+			Without you all the Beautiful meanings in life will be gone;<br />
+			I am so happy and lucky to have you my Beautiful lady;<br />
+			and I promise I will be there for you no matter what;<br />
+			cuz Your my pretty cupcake , angel , lady and girl ever;<br />
 			<br>
-			All I want to say is:<br />
-			Baby, I will love you forever;<br />
+			Enough Words.....<br />
+			I booked a little room for us to celebarate , Wanna Join me?<br />
+			<span class="comments">//Hint : Don't try to hit the NO button, hahaha.</span><br />
 			<br>
-			<br>
-			Now If you want to hug me you can touch the heart below<br />
-			<br>
-			<span id="heartspan">
-			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
-			</span>
+			<div class="buttons">
+				<button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+				<button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+			</div>
 		</div>
 		<div id="loveHeart">
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					वर्षा ऋतु FOREVER
+					 This is How much we spent Together..
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					I LOVE YOU SO MUCH<br/>
-					<div class="signature">- RITVIK</div>
+					And I am so Grateful<br/>
+					<div class="signature">- Your Pumpkin</div>
 				</div>
 			</div>
 		</div>
@@ -71,9 +73,9 @@
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
-together.setFullYear(2016, 8, 5);
-together.setHours(16);
-together.setMinutes(30);
+together.setFullYear(2020, 1, 1);
+together.setHours(0);
+together.setMinutes(0);
 together.setSeconds(0);
 together.setMilliseconds(0);
 
@@ -98,6 +100,26 @@ if (!document.createElement('canvas').getContext) {
 
 	adjustCodePosition();
 	$("#code").typewriter();
+}
+
+function nextPage() {
+	window.location.href = "https://python-arch.github.io/Lamonabirthday/";
+}
+
+function moveButton() {
+	var noButton = document.getElementById('noButton');
+	var yesButton = document.getElementById('yesButton');
+
+	// Move the "No" button to a random position
+	var x = Math.random() * (window.innerWidth - noButton.offsetWidth) - 85;
+	var y = Math.random() * (window.innerHeight - noButton.offsetHeight) - 48;
+	noButton.style.left = `${x}px`;
+	noButton.style.top = `${y}px`;
+
+	// Increase the size of the "Yes" button by 20%
+	var currentScale = yesButton.style.transform.match(/scale\(([^)]+)\)/);
+	var newScale = currentScale ? parseFloat(currentScale[1]) * 1.2 : 1.2;
+	yesButton.style.transform = `scale(${newScale})`;
 }
 </script>
 </body>
